@@ -26,6 +26,10 @@ return require('packer').startup(function(use)
   use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('mfussenegger/nvim-dap')
+  use{'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'}}
+  use ("folke/neodev.nvim")
+  use('theHamsta/nvim-dap-virtual-text')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
