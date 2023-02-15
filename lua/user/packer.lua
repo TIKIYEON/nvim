@@ -30,6 +30,13 @@ return require('packer').startup(function(use)
   use{'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'}}
   use ("folke/neodev.nvim")
   use('theHamsta/nvim-dap-virtual-text')
+  use('github/copilot.vim')
+
+  use {
+      'simrat39/symbols-outline.nvim'
+  }
+
+  use('onsails/lspkind-nvim')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -63,6 +70,14 @@ return require('packer').startup(function(use)
       'lewis6991/gitsigns.nvim',
       -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   }
+
+
+use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 
   use {
       "folke/trouble.nvim",
