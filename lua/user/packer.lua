@@ -26,11 +26,21 @@ return require('packer').startup(function(use)
   use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  use('mfussenegger/nvim-dap')
-  use{'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'}}
+  -- use('mfussenegger/nvim-dap')
+  -- use{'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'}}
   use ("folke/neodev.nvim")
-  use('theHamsta/nvim-dap-virtual-text')
+  -- use('theHamsta/nvim-dap-virtual-text')
   use('github/copilot.vim')
+
+  use({
+      "kylechui/nvim-surround",
+      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+      config = function()
+          require("nvim-surround").setup({
+              -- Configuration here, or leave empty to use defaults
+          })
+      end
+  })
 
   use {
       'simrat39/symbols-outline.nvim'
