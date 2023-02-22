@@ -32,6 +32,11 @@ return require('packer').startup(function(use)
   -- use('theHamsta/nvim-dap-virtual-text')
   use('github/copilot.vim')
 
+  use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
+
   use({
       "kylechui/nvim-surround",
       tag = "*", -- Use for stability; omit to use `main` branch for the latest features
